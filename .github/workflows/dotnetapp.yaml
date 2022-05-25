@@ -1,7 +1,11 @@
 name: Deploy ASP.NET Core app to Azure Web App
 on:
-  workflow_dispatch:
-    branches: [ main ]
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '*'
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
 # 1. Set up the following secrets in your repository:
